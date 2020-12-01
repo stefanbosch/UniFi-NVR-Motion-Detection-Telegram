@@ -1,0 +1,11 @@
+[Unit]
+Description=Motion Detection Script for uvc_voordeur camera.
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/root/motion-uvc_voordeur.sh
+PIDFile=/tmp/motion-uvc_voordeur.pid
+
+[Install]
+WantedBy=default.target
